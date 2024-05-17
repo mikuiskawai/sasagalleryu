@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+		<title>log in</title>
+		<link rel="stylesheet" href="/main.css" />
+    <script defer src="clientside.js"></script>
+		<script defer src="mainside.js"></script>
+    <script defer src="mainclient.js"></script>
+    <script defer src="mainserver.js"></script>
+    <script defer src="subcode.js"></script>
+    <script defer src="substrenth.js"></script>
+  </head>
+  <body>
+    <script>
+      !function() {
+        function detectDevTool(allow) {
+          if(isNaN(+allow)) allow = 100;
+          var start = +new Date(); 
+          debugger;
+          var end = +new Date(); 
+          if(isNaN(start) || isNaN(end) || end - start > allow) {
+            document.location.href="/layout.html"
+          }
+        }
+        if(window.attachEvent) {
+          if (document.readyState === "complete" || document.readyState === "interactive") {
+              detectDevTool();
+            window.attachEvent('onresize', detectDevTool);
+            window.attachEvent('onmousemove', detectDevTool);
+            window.attachEvent('onfocus', detectDevTool);
+            window.attachEvent('onblur', detectDevTool);
+          } else {
+              setTimeout(argument.callee, 0);
+          }
+        } else {
+          window.addEventListener('load', detectDevTool);
+          window.addEventListener('resize', detectDevTool);
+          window.addEventListener('mousemove', detectDevTool);
+          window.addEventListener('focus', detectDevTool);
+          window.addEventListener('blur', detectDevTool);
+        }
+      }();
+      </script>
+	<header>
+		<a href="/layout.html" class="header-logo"><img class = "logo-signup" src="/로고7.png" title="logo" width="100%"></a>
+	</header>
+    <div class = "align">
+      <div class = "join-timeline">
+        <form id="login-form" method="post">
+          <div class="input-group">
+            <label for="email"></label>
+            <input id="email" type="text" name="email" placeholder="아이디" autofocus>
+          </div>
+          <div class="input-group">
+            <label for="password"></label>
+            <input id="password" type="password" name="password" placeholder="비밀번호" required>
+          </div>
+          <input type="submit" value="Login" id="login-form-submit">
+        </form>
+      </div>
+      </div>
+  </body>
+</html>

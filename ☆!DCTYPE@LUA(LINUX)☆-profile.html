@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" href="/main.css" />
+		<title>SASA</title>
+  </head>
+  <body>
+	<script>
+		!function() {
+		  function detectDevTool(allow) {
+			if(isNaN(+allow)) allow = 100;
+			var start = +new Date(); 
+			debugger;
+			var end = +new Date(); 
+			if(isNaN(start) || isNaN(end) || end - start > allow) {
+			  document.location.href="/layout.html"
+			}
+		  }
+		  if(window.attachEvent) {
+			if (document.readyState === "complete" || document.readyState === "interactive") {
+				detectDevTool();
+			  window.attachEvent('onresize', detectDevTool);
+			  window.attachEvent('onmousemove', detectDevTool);
+			  window.attachEvent('onfocus', detectDevTool);
+			  window.attachEvent('onblur', detectDevTool);
+			} else {
+				setTimeout(argument.callee, 0);
+			}
+		  } else {
+			window.addEventListener('load', detectDevTool);
+			window.addEventListener('resize', detectDevTool);
+			window.addEventListener('mousemove', detectDevTool);
+			window.addEventListener('focus', detectDevTool);
+			window.addEventListener('blur', detectDevTool);
+		  }
+		}();
+		</script>
+	<div class="upheader"> 
+		<a href="/☆!DCTYPE@LUA(LINUX)☆.html" class="upheader-logo"><img class = "logo" src="/로고2.png" title="logo" width="100%"></a>
+			<div class="upheader-menu">
+				<a class="profile" href="/profile"><img src="/user.png"></a>
+			</div>
+	</div>
+    <div class="container">
+		<a href="/☆!DCTYPE@LUA(LINUX)☆.html" class="header-logo"><img class = "logo" src="/로고3.png" title="logo" width="100%"></a>
+			<form id="hashtag-form" action="/hashtag.html">
+			<div class="search_search">
+				<div class = "search">	
+					<input placeholder="검색" type= "hashtag" name="hashtag" maxlength="225">
+					<button class= "btn" placeholder = "Search Tag">
+					<i class="material-icons">search
+					</i></button>
+				</div>
+			</div>
+		</form>	
+	</div>
+	<div class="profile-align">
+		<h1>프로필</h1>
+		<div class="followings and followers half">
+		  <h2>아이디:ERROR!</h2>
+		  <h2>닉네임:VDVD{WK15_I1DJ_15_IDN3}</h2>
+		  <a ><button id="profile-update-button" style="color: #000" type="submit" class="profile-update-button">프로필 확인</button></a>
+		  <h2>팔로우</h2>
+		  <div class="count following-count">????명</div>
+		  <h2>팔로워</h2>
+		  <div class="count follower-count">????명</div>
+		  <div class="followings-followers">팔로우/팔로워 명단</div>
+		  <div class="likedposts">좋아요 표시한 사진</div>
+		  <div class="PostedPosts">업로드한 사진</div>
+		</div>
+		<a href="/layout.html"><button id="logout-button" style="color: #fff" type="submit" class="logout-button">로그아웃</button></a>
+	  </div>
+	<footer>
+		<div id="copyright">
+		<p>
+			<span>이메일 : woolrabit77@sasa.hs.kr</span><br/>
+			<span>Copyright 2024. woolrabit77. All Rights Reserved.</span><br>
+			<span>사이트 디자인이 불편한 점 양해 부탁드립니다.</span>
+		</p>
+		</div>
+	</footer>
+  </body>
+</html>
